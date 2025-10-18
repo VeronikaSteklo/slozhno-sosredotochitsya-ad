@@ -92,7 +92,7 @@
 
 /* === Разделы и текст === */
 .section__title {
-  margin: 50px 0 20px;
+  margin-top: 50px;
   font-size: var(--text-font-size);
   color: var(--titles-color);
 }
@@ -103,7 +103,7 @@
 }
 
 .text__subtitle {
-  margin: 10px 0 20px;
+  margin: 7px;
 }
 
 /* === Основной контент === */
@@ -120,8 +120,4 @@
 .list__item {
   display: grid;
   gap: 10px;
-}
-
-.link {
-  text-decoration: none;
 }
