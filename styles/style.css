@@ -31,6 +31,7 @@
 .accented-text {
   background-color: var(--accent-color);
   color: var(--accented-text-color);
+  padding: 0 !important;
 }
 
 .accented-text-bold {
@@ -73,28 +74,28 @@
 
 /* === Разделы и текст === */
 .section__title {
-  margin: 0;
+  padding: 0;
   font-size: 18px;
   line-height: 130%;
   color: var(--titles-color);
 }
 
 .section__subtitle {
-  margin-top: 20px;
+  padding-top: 20px;
 }
 
 @media (min-width: 768px) {
   .section__title {
-    margin: 0;
-    margin-bottom: 20px;
+    padding: 0;
+    /*padding-bottom: 20px;*/
   }
   .section__subtitle {
-    margin: 0;
+    padding: 0;
   }
 }
 
 .text__subtitle {
-  margin: 10px 0 20px;
+  padding-top: 10px;
   line-height: 130%;
 }
 

@@ -6,11 +6,11 @@
 @media (min-width: 768px) {
   .why__concentrate {
     grid-template-columns: 1fr 2fr;
-    margin-top: 0;
+    padding-top: 0;
   }
 
   .section__title {
-    margin: 0;
+    padding: 0;
   }
 
 }
