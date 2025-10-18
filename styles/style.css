@@ -121,3 +121,7 @@
   display: grid;
   gap: 10px;
 }
+
+.link {
+  text-decoration: none;
+}
