@@ -1,3 +1,4 @@
+/* === Основные стили проекта === */
 @import 'sections/header.css';
 @import 'sections/main/why__concentrate.css';
 @import "sections/main/what__reduces.css";
@@ -5,20 +6,19 @@
 @import "sections/main/pictures.css";
 @import "sections/main/main.css";
 @import "sections/footer.css";
-/* === Основные стили проекта === */
 
+
+/* === Общие стили страницы === */
 .page {
   margin: 0;
   padding: 10px;
   font-family: var(--page-font-family), "IBM Plex Mono", monospace;
-  font-size: var(--text-font-size);
-  line-height: var(--text-line-height);
+  font-size: 18px;
   color: var(--text-color);
   background-image: var(--cover-image);
-  background-position: center;
+  background-position: top center;
   background-size: cover;
   background-attachment: fixed;
-  background-color: var(--background-color);
 }
 
 @media (min-width: 768px) {
@@ -37,17 +37,9 @@
   font-weight: 700;
 }
 
-.accented-shadow-text {
-  text-shadow: 2px 2px 0 var(--accent-color);
-}
-
 .link {
   text-decoration: none;
-  border-bottom: 1px solid currentColor;
-}
-
-.link:hover {
-  border-bottom: 1px solid var(--text-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
 }
 
 /* === Декор === */
@@ -55,6 +47,7 @@
   position: relative;
 }
 
+/* ---------- декоративные уголки ---------- */
 .decorated-zone::before,
 .decorated-zone::after {
   content: "";
@@ -65,60 +58,47 @@
 }
 
 .decorated-zone::before {
-  top: 10px;
-  right: 10px;
+  top: 0;
+  right: 0;
   border-top: 1px solid var(--decor-color);
   border-right: 1px solid var(--decor-color);
 }
 
 .decorated-zone::after {
-  bottom: 10px;
-  left: 10px;
+  bottom: 0;
+  left: 0;
   border-bottom: 1px solid var(--decor-color);
   border-left: 1px solid var(--decor-color);
 }
 
-@media (min-width: 768px) {
-  .decorated-zone::before {
-    top: 20px;
-    right: 20px;
-  }
-
-  .decorated-zone::after {
-    bottom: 20px;
-    left: 20px;
-  }
-}
-
 /* === Разделы и текст === */
-.main__section {
-  display: grid;
-  gap: 20px;
-}
-
 .section__title {
-  margin-top: 50px;
-  font-size: var(--text-font-size);
+  margin: 0;
+  font-size: 18px;
+  line-height: 130%;
   color: var(--titles-color);
 }
 
 .section__subtitle {
   margin-top: 20px;
-  font-size: var(--text-font-size);
+}
+
+@media (min-width: 768px) {
+  .section__title {
+    margin: 0;
+    margin-bottom: 20px;
+  }
+  .section__subtitle {
+    margin: 0;
+  }
 }
 
 .text__subtitle {
-  margin: 7px;
+  margin: 10px 0 20px;
+  line-height: 130%;
 }
 
 /* === Основной контент === */
-
-.list {
+.main {
   display: grid;
-  gap: var(--gap);
-}
-
-.list__item {
-  display: grid;
-  gap: 10px;
 }
