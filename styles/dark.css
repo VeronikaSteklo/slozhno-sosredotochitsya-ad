@@ -4,11 +4,7 @@
   переключая тему
 */
 
-:root.theme-dark {
-  /* сохраните этот селектор в приведённом виде.
-    Так стили написанные ниже будут иметь больший вес,
-    чем стили в медиазапросе предпочтений пользователя
-  */
+.page.theme-dark {
   --text-color: #F1B2CE;
   --background-color: #000028;
   --accent-color: #FF0070;
@@ -27,26 +23,24 @@
   --rec-decor-visibility: visible;
 }
 
-.theme-dark .header__title {
-  text-shadow: 4px 4px 0 var(--accent-color);
-}
+@media (prefers-color-scheme: dark) {
 
-.theme-dark .footer__title {
-  text-shadow: 2px 2px 0 var(--accent-color);
-}
+  :root {
+    --text-color: #F1B2CE;
+    --background-color: #000028;
+    --accent-color: #FF0070;
+    --rec-decoration-clr: #FF0070;
+    --decor-color: #FF0070;
 
-.theme-dark .accented-shadow-text {
-  text-shadow: 2px 2px 0 var(--accent-color);
-}
+    --title-color: #DB00FF;
+    --titles-color: #FF0070;
+    --accented-text-color: #000028;
 
-.theme-dark .header__theme-menu-button:hover {
-  border: 1px solid var(--button-hover-color);
-}
+    --button-text-color: #FF0070;
+    --button-hover-color: rgba(255, 0, 112, 0.4);
+    --button-active-border: #FF0070;
 
-.theme-dark .link {
-  text-shadow: 2px 2px 0 var(--accent-color);
-}
-
-.theme-dark .link:hover {
-  border-bottom: 1px solid var(--text-color);
+    --cover-image: url('../images/cover-image-dark.png');
+    --rec-decor-visibility: visible;
+  }
 }

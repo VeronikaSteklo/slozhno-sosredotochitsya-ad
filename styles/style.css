@@ -91,6 +91,11 @@
 }
 
 /* === Разделы и текст === */
+.main__section {
+  display: grid;
+  gap: 20px;
+}
+
 .section__title {
   margin-top: 50px;
   font-size: var(--text-font-size);
@@ -107,10 +112,6 @@
 }
 
 /* === Основной контент === */
-.main {
-  display: grid;
-  gap: var(--gap);
-}
 
 .list {
   display: grid;
