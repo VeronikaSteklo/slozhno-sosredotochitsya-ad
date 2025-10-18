@@ -1,37 +1,35 @@
 .header {
   position: relative;
   display: grid;
+  grid-template-rows: 1fr min-content 1fr;
+  min-block-size: 100vb;
+  padding: 10px;
 }
 
-/* ---------- декоративный "REC" ---------- */
 .decorative-rec-icon {
   position: absolute;
   display: flex;
   align-items: center;
   gap: 10px;
-  margin: 2px 10px 0 0;
   color: var(--rec-decoration-clr);
   visibility: var(--rec-decor-visibility);
-  inset-inline-end: 0;
-  inset-block-start: 0;
+  inset-inline-end: 20px;
+  inset-block-start: 10px;
 }
 
 .decorative-rec-icon::after {
-  visibility: var(--rec-decor-visibility);
   content: '';
   display: block;
   border-radius: 50%;
-  box-shadow: 0 0 5px 4px var(--rec-decoration-clr);
+  box-shadow: 0 0 4px 2px var(--rec-decoration-clr);
   background-color: var(--rec-decoration-clr);
-  inline-size: 7px;
-  block-size: 7px;
+  inline-size: 9px;
+  block-size: 9px;
 }
 
-
-/* ---------- меню ---------- */
 .header__theme-menu {
   justify-self: end;
-  margin: 75px 0;
+  align-self: center;
 }
 
 .header__theme-menu-list {
@@ -52,12 +50,7 @@
   border: none;
   cursor: pointer;
   font-family: inherit;
-  padding: 10px 13px;
-  width: 70px;
-  height: 26px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  padding: 2px 13px;
   text-transform: lowercase;
 }
 
@@ -72,48 +65,40 @@
 
 .header__theme-menu-button:focus {
   outline: none;
+}
+
+.header__theme-menu-button:focus-visible {
   border-bottom: 1px solid var(--button-text-color);
 }
 
-/* ---------- заголовок ---------- */
 .header__title {
   margin: 0;
+  font-weight: 700;
   font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   line-height: var(--title-line-height);
   color: var(--title-color);
-  text-shadow: 4px 4px 0 var(--accent-color);
   justify-self: start;
   align-self: center;
 }
 
+.header__text {
+  justify-self: end;
+  align-self: center;
+  max-inline-size: 364px;
+}
+
 @media (min-width: 768px) {
+  .header {
+    padding: 20px;
+  }
+
   .header__title {
     font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
   }
-}
 
-/* ---------- подпись ---------- */
-.header__text {
-  margin: 55px 0;
-  justify-self: end;
-}
-
-/* класс для декоративного фона подписи */
-.title-decor {
-  background-color: var(--accent-color);
-  color: var(--background-color);
-  padding: 5px 10px;
-  display: inline-block;
-}
-
-/* ---------- адаптив ---------- */
-@media (min-width: 768px) {
-  .header__theme-menu {
-    margin: 172px 0;
-  }
-
-  .header__text {
-    margin: 162px 0;
+  .decorative-rec-icon {
+    inset-inline-end: 30px;
+    inset-block-start: 20px;
   }
 }
 
@@ -121,20 +106,13 @@
   .header__theme-menu {
     justify-self: center;
     align-self: start;
-    margin: 0;
   }
 
   .header__theme-menu-list {
     flex-direction: row;
   }
 
-  .header__title {
-    margin-top: 273px;
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  }
-
   .header__text {
-    margin: 114px 0;
     max-inline-size: 491px;
   }
 }

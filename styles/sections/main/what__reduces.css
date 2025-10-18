@@ -1,23 +1,16 @@
+.what__reduces {
+  display: grid;
+  gap: var(--gap);
+}
+
 @media (min-width: 768px) {
-
   .what__reduces {
-    margin: 60px 0 0;
-  }
-
-  .section__title {
-    max-inline-size: 236px;
+    margin-top: 80px;
   }
 }
 
 @media (min-width: 1024px) {
-
-  .section__title {
-    max-inline-size: 314px;
-  }
-
   .what-reduces-list {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    column-gap: var(--gap);
+    grid-template-columns: repeat(3, 1fr);
   }
 }
