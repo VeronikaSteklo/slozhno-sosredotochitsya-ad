@@ -1,0 +1,18 @@
+.how-section__subtitle {
+  font-weight: normal;
+}
+
+@media (min-width: 768px) {
+  .how__concentrate {
+    display: grid;
+    grid-template-columns: 236px 1fr;
+    gap: var(--gap);
+    margin: 81px 0 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .how__concentrate {
+    grid-template-columns: 315px 1fr;
+  }
+}

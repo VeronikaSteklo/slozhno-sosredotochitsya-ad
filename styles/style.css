@@ -1,5 +1,100 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
+/* === Основные стили проекта === */
+@import 'sections/header.css';
+@import 'sections/main/why__concentrate.css';
+@import "sections/main/what__reduces.css";
+@import "sections/main/how__concentrate.css";
+@import "sections/main/pictures.css";
+@import "sections/main/main.css";
+@import "sections/footer.css";
 
+
+/* === Общие стили страницы === */
 .page {
-  /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  margin: 0;
+  padding: 10px;
+  font-family: var(--page-font-family), "IBM Plex Mono", monospace;
+  font-size: 18px;
+  color: var(--text-color);
+  background-image: var(--cover-image);
+  background-position: top center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+@media (min-width: 768px) {
+  .page {
+    padding: 20px;
+  }
+}
+
+/* === Акцентные элементы === */
+.accented-text {
+  background-color: var(--accent-color);
+  color: var(--accented-text-color);
+}
+
+.accented-text-bold {
+  font-weight: 700;
+}
+
+.link {
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--accent-color);
+}
+
+/* === Декор === */
+.decorated-zone {
+  position: relative;
+}
+
+/* ---------- декоративные уголки ---------- */
+.decorated-zone::before,
+.decorated-zone::after {
+  content: "";
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  border-color: var(--decor-color);
+}
+
+.decorated-zone::before {
+  top: 0;
+  right: 0;
+  border-top: 1px solid var(--decor-color);
+  border-right: 1px solid var(--decor-color);
+}
+
+.decorated-zone::after {
+  bottom: 0;
+  left: 0;
+  border-bottom: 1px solid var(--decor-color);
+  border-left: 1px solid var(--decor-color);
+}
+
+/* === Разделы и текст === */
+.section__title {
+  margin: 50px 0 20px;
+  font-size: 18px;
+  line-height: 130%;
+  color: var(--titles-color);
+}
+
+@media (min-width: 768px) {
+  .section__title {
+    margin: 80px 0 20px;
+  }
+}
+
+.section__subtitle {
+  margin-top: 20px;
+}
+
+.text__subtitle {
+  margin: 10px 0 20px;
+  line-height: 130%;
+}
+
+/* === Основной контент === */
+.main {
+  display: grid;
 }

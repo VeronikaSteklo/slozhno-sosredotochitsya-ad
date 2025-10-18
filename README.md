@@ -1,0 +1,1 @@
+https://github.com/VeronikaSteklo/slozhno-sosredotochitsya-ad/tree/main

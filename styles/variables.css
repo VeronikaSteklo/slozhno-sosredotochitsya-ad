@@ -1,4 +1,36 @@
 /*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
+  Переменные проекта и базовые настройки
+  (Переопределяются в темах light/dark)
 */
+:root {
+  /* === Типографика === */
+  --page-font-family: "IBM Plex Mono";
+  --text-font-size: 18px;
+  --text-line-height: 1.3;
+  --title-font-size: 116px;
+  --title-line-height: 0.825;
+
+  /* === Цвета === */
+  --text-color: #353430;
+  --title-color: #ffc2e6;
+  --accent-color: #ff8dcb;
+  --background-color: #fff1f7;
+  --menu-color: #353430;
+  --decor-color: #353430;
+  --titles-color: #353430;
+  --accented-text-color: #353430;
+
+  /* === Кнопки === */
+  --button-text-color: #353430;
+  --button-hover-color: #353430FF;
+  --button-active-border: #353430;
+  --button-line-height: 18;
+
+  /* === Изображения === */
+  --cover-image: url('../images/cover-image-light.png');
+
+  --rec-decor-visibility: hidden;
+  --rec-decoration-clr: #FF0070;
+
+  --gap: 20px;
+}

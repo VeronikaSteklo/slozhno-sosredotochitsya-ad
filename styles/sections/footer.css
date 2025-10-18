@@ -1,0 +1,23 @@
+.footer {
+  margin-top: 40px;
+  display: grid;
+  padding: clamp(10px, 0.0286rem + 2.5445vw, 20px);
+  min-block-size: 100vh;
+}
+
+.footer__title {
+  margin: 0;
+  font-weight: bold;
+  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+  line-height: var(--title-line-height);
+  color: var(--title-color);
+  text-shadow: 2px 2px 0 var(--accent-color);
+  justify-self: center;
+  align-self: center;
+}
+
+@media (min-width: 768px) {
+  .footer__title {
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+}
