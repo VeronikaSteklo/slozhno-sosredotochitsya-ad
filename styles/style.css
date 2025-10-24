@@ -208,6 +208,8 @@
   margin: 55px 0;
   font-size: inherit;
   line-height: inherit;
+  width: 100%;
+  text-align: left;
 }
 
 /* #endregion Конец блока header */
@@ -231,6 +233,11 @@
 
 .how-section__subtitle {
   font-weight: 400;
+}
+
+.how__concentrate {
+  display: grid;
+  gap: 20px;
 }
 
 .tips-sublist {
@@ -302,11 +309,52 @@
   .header__text {
     justify-self: end;
     width: clamp(364px, calc(100% / 2 - 10px), 491px);
+    max-width: 491px;
+    text-align: right;
   }
 
   .main {
     gap: 80px;
     padding: 60px 20px;
+  }
+
+  .how__concentrate {
+    display: grid;
+    grid-template-columns: clamp(236px, calc(100% / 3.25), 315px) 1fr;
+    gap: 20px;
+    align-items: start;
+  }
+
+  /* Основной заголовок секции */
+  .how__concentrate > .section__title {
+    grid-column: 1;
+    grid-row: 1;
+    margin: 0;
+  }
+
+  /* Весь список с контентом */
+  .how__concentrate > .how-concentrate-list {
+    grid-column: 2;
+    grid-row: 1;
+  }
+
+  /* Внутри списка - обычный поток */
+  .how-concentrate-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Подзаголовок "5 простых советов" */
+  .how-concentrate-list .section__subtitle {
+    margin: 0;
+  }
+
+  /* Вложенный список советов */
+  .tips-sublist {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
   }
 }
 
@@ -333,5 +381,46 @@
 
   .header__theme-menu-list {
     flex-direction: row;
+  }
+}
+.section__subtitle {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* Исправляем акцентный фон - полная ширина, но только под текст */
+.accented-background {
+  background: var(--accent-color, #ff0070);
+  /* Убираем ограничение по ширине */
+  width: 100%;
+  /* Добавляем отступы чтобы текст не прилипал к краям */
+  padding: 2px 10px;
+  /* Убеждаемся что высота определяется содержимым */
+  height: fit-content;
+}
+
+/* Убираем предыдущие стили которые ограничивали ширину */
+.accented-text {
+  color: var(--highlight-color, #000028);
+}
+
+.accented-text-bold {
+  font-weight: 700;
+}
+
+/* Для подзаголовков в секции how */
+.how-section__subtitle {
+  font-weight: 400;
+}
+
+/* Убеждаемся что grid-элементы правильно отображаются */
+.list__item .section__subtitle {
+  margin: 0;
+}
+
+/* Медиа-запросы */
+@media (width >= 768px) {
+  .accented-background {
+    padding: 2px 10px;
   }
 }
