@@ -340,6 +340,12 @@
     align-items: start;
   }
 
+  .how-concentrate-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
   .how__concentrate > .section__title {
     grid-column: 1;
     grid-row: 1;
@@ -385,5 +391,12 @@
 
   .header__theme-menu-list {
     flex-direction: row;
+  }
+
+  .list__item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
   }
 }
