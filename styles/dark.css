@@ -1,10 +1,11 @@
 /*
   Специально для тёмной темы при наличии класса,
-  здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
+  теперь это основная тема, но оставляем для обратной совместимости
 */
 
 .page.theme-dark {
+  /* Все значения уже установлены по умолчанию в :root */
+  /* Можно оставить пустым или продублировать значения для явности */
   --text-color: #F1B2CE;
   --background-color: #000028;
   --accent-color: #FF0070;
@@ -17,30 +18,10 @@
 
   --button-text-color: #FF0070;
   --button-hover-color: rgba(255, 0, 112, 0.4);
-  --button-active-border: #FF0070;
 
   --cover-image: url('../images/cover-image-dark.png');
   --rec-decor-visibility: visible;
 }
 
-@media (prefers-color-scheme: dark) {
-
-  :root {
-    --text-color: #F1B2CE;
-    --background-color: #000028;
-    --accent-color: #FF0070;
-    --rec-decoration-clr: #FF0070;
-    --decor-color: #FF0070;
-
-    --title-color: #DB00FF;
-    --titles-color: #FF0070;
-    --accented-text-color: #000028;
-
-    --button-text-color: #FF0070;
-    --button-hover-color: rgba(255, 0, 112, 0.4);
-    --button-active-border: #FF0070;
-
-    --cover-image: url('../images/cover-image-dark.png');
-    --rec-decor-visibility: visible;
-  }
-}
+/* Убираем медиа-запрос для prefers-color-scheme: dark,
+   так как это теперь тема по умолчанию */

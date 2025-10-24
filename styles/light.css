@@ -1,9 +1,4 @@
-/*
-  Специально для светлой темы при наличии класса.
-  Здесь окажутся стили, которые нужно переопределить принудительно,
-  переключая тему
-*/
-
+/* === LIGHT THEME === */
 .page.theme_light {
   --text-color: #353430;
   --title-color: #ffc2e6;
@@ -13,37 +8,11 @@
   --decor-color: #353430;
   --titles-color: #353430;
   --accented-text-color: #353430;
-
   --button-text-color: #353430;
   --button-hover-color: rgba(53, 52, 48, 0.4);
-  --button-active-border: #353430;
-
   --cover-image: url('../images/cover-image-light.png');
   --rec-decor-visibility: hidden;
 }
 
-@media (prefers-color-scheme: light) {
-  /* Вам также нужно будет написать ряд подобных селекторов */
-
-  :root {
-    /* сохраните этот селектор в приведённом виде.
-      Так стили написанные ниже будут иметь больший вес,
-      чем стили в медиазапросе предпочтений пользователя
-    */
-    --text-color: #353430;
-    --title-color: #ffc2e6;
-    --accent-color: #ff8dcb;
-    --background-color: #fff1f7;
-    --menu-color: #353430;
-    --decor-color: #353430;
-    --titles-color: #353430;
-    --accented-text-color: #353430;
-
-    --button-text-color: #353430;
-    --button-hover-color: rgba(53, 52, 48, 0.4);
-    --button-active-border: #353430;
-
-    --cover-image: url('../images/cover-image-light.png');
-    --rec-decor-visibility: hidden;
-  }
-}
+/* Убираем медиа-запрос для prefers-color-scheme: light,
+   так как теперь светлая тема применяется только явно через класс */

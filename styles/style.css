@@ -1,12 +1,15 @@
 /* === Основные стили проекта === */
+
+/* Сначала импортируем переменные с тёмной темой по умолчанию */
+@import 'variables.css';
+
+/* Затем секции */
 @import 'sections/header.css';
-@import 'sections/main/why__concentrate.css';
-@import "sections/main/what__reduces.css";
-@import "sections/main/how__concentrate.css";
-@import "sections/main/pictures.css";
-@import "sections/main/main.css";
+@import "sections/main.css";
 @import "sections/footer.css";
 
+/* И в конце - переопределения для светлой темы */
+@import 'themes/light-theme.css';
 
 /* === Общие стили страницы === */
 .page {
@@ -87,7 +90,6 @@
 @media (min-width: 768px) {
   .section__title {
     padding: 0;
-    /*padding-bottom: 20px;*/
   }
   .section__subtitle {
     padding: 0;
