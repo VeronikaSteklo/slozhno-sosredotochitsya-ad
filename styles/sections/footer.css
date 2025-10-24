@@ -1,26 +1,9 @@
 .footer {
   display: grid;
-  place-items: center;
-  min-block-size: 100vb;
-  margin-top: 40px;
-  padding: 10px;
-  position: relative;
 }
 
 .footer__title {
-  margin: 0;
-  font-weight: 700;
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  line-height: var(--title-line-height);
-  color: var(--title-color);
-}
-
-@media (min-width: 768px) {
-  .footer {
-    padding: 20px;
-  }
-
-  .footer__title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-  }
+  justify-self: center;
+  align-self: center;
+  text-shadow: 2px 2px 0 var(--brand-color);
 }

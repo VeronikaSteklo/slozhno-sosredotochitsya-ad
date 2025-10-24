@@ -1,10 +1,7 @@
 .header {
-  position: relative;
   display: grid;
-  grid-template-rows: 1fr min-content 1fr;
-  min-block-size: 100vb;
-  padding: 10px;
-  margin-bottom: 44px;
+  grid-template-rows: auto max-content auto;
+  align-items: center;
 }
 
 .decorative-rec-icon {
@@ -12,56 +9,73 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  color: var(--rec-decoration-clr);
-  visibility: var(--rec-decor-visibility);
-  inset-inline-end: 20px;
-  inset-block-start: 10px;
+  margin: 2px 10px 0 0;
+  color: var(--indicator-color);
+  inset-inline-end: 0;
+  inset-block-start: 0;
 }
 
 .decorative-rec-icon::after {
   content: '';
   display: block;
   border-radius: 50%;
-  box-shadow: 0 0 4px 2px var(--rec-decoration-clr);
-  background-color: var(--rec-decoration-clr);
-  inline-size: 9px;
-  block-size: 9px;
+  box-shadow: 0 0 5px 4px var(--indicator-color);
+  background-color: var(--indicator-color);
+  inline-size: 7px;
+  block-size: 7px;
+}
+
+.decorated-zone {
+  position: relative;
+  min-block-size: 97vh;
+}
+
+.decorated-zone::before {
+  content: '';
+  position: absolute;
+  border-top: 1px solid var(--decorative-element-color);
+  border-right: 1px solid var(--decorative-element-color);
+  inline-size: 25px;
+  block-size: 25px;
+  inset-inline-end: 0;
+  inset-block-start: 0;
+}
+
+.decorated-zone::after {
+  content: '';
+  position: absolute;
+  border-bottom: 1px solid var(--decorative-element-color);
+  border-left: 1px solid var(--decorative-element-color);
+  inline-size: 25px;
+  block-size: 25px;
+  inset-block-end: 0;
 }
 
 .header__theme-menu {
   justify-self: end;
-  align-self: center;
+  margin: 5px 0 0;
 }
 
 .header__theme-menu-list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
-}
-
-.header__theme-menu-item {
-  list-style: none;
+  gap: 13px;
 }
 
 .header__theme-menu-button {
-  font-size: var(--text-font-size);
-  line-height: var(--button-line-height);
-  background: transparent;
-  color: var(--button-text-color);
   border: none;
-  cursor: pointer;
-  font-family: inherit;
-  padding: 2px 13px;
+  padding: 0 13px;
+  outline: 1px solid transparent;
+  color: var(--navigation-color);
   text-transform: lowercase;
-}
-
-.header__theme-menu-button_active {
-  pointer-events: none;
-  border: 1px solid var(--button-text-color);
+  background-color: transparent;
+  transition-duration: 0.2s;
+  transition-property: outline;
+  cursor: pointer;
 }
 
 .header__theme-menu-button:hover {
-  border: 1px solid var(--button-hover-color);
+  outline: 1px solid var(--interactive-hover-color);
 }
 
 .header__theme-menu-button:focus {
@@ -69,53 +83,69 @@
 }
 
 .header__theme-menu-button:focus-visible {
-  border-bottom: 1px solid var(--button-text-color);
+  border-bottom: 1px solid var(--brand-color);
+  outline: none;
+}
+
+.header__theme-menu-button_active {
+  outline: 1px solid var(--navigation-color);
+  pointer-events: none;
 }
 
 .header__title {
-  margin: 0;
-  margin-left: -20px;
-  font-weight: 700;
-  font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  line-height: var(--title-line-height);
-  color: var(--title-color);
-  justify-self: start;
-  align-self: center;
+  align-self: self-start;
+  margin: 15px 0 0;
+  text-shadow: 4px 4px 0 var(--brand-color);
 }
 
 .header__text {
   justify-self: end;
-  align-self: center;
+  margin: 0;
+  padding-right: 50px;
   max-inline-size: 364px;
 }
 
+/* Медиа-запросы */
 @media (min-width: 768px) {
-  .header {
-    padding: 20px;
+  .decorated-zone {
+    min-block-size: 96vh;
+  }
+
+  .header__theme-menu {
+    margin: 10px 0 0;
   }
 
   .header__title {
-    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
-    margin-left: -40px;
+    margin: 20px 0 0 -20px;
   }
 
-  .decorative-rec-icon {
-    inset-inline-end: 30px;
-    inset-block-start: 20px;
+  .header__text {
+    margin: 0;
   }
 }
 
 @media (min-width: 1024px) {
+  .decorated-zone {
+    min-block-size: 94.7vh;
+  }
+
   .header__theme-menu {
     justify-self: center;
-    align-self: start;
+    align-self: self-start;
+    margin: 0;
   }
 
   .header__theme-menu-list {
     flex-direction: row;
   }
 
+  .header__title {
+    margin: 45px 0 0 -20px;
+  }
+
   .header__text {
+    margin: 0;
+    padding: 0;
     max-inline-size: 491px;
   }
 }

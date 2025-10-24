@@ -1,27 +1,12 @@
-/*
-  Специально для тёмной темы при наличии класса,
-  теперь это основная тема, но оставляем для обратной совместимости
-*/
-
-.page.theme-dark {
-  /* Все значения уже установлены по умолчанию в :root */
-  /* Можно оставить пустым или продублировать значения для явности */
-  --text-color: #F1B2CE;
-  --background-color: #000028;
-  --accent-color: #FF0070;
-  --rec-decoration-clr: #FF0070;
-  --decor-color: #FF0070;
-
-  --title-color: #DB00FF;
-  --titles-color: #FF0070;
-  --accented-text-color: #000028;
-
-  --button-text-color: #FF0070;
-  --button-hover-color: rgba(255, 0, 112, 0.4);
-
-  --cover-image: url('../images/cover-image-dark.png');
-  --rec-decor-visibility: visible;
+.page.theme_dark {
+  --brand-color: #ff0070;
+  --brand-bg-color: #000028;
+  --primary-heading-color: #db00ff;
+  --main-text-color: #f1b2ce;
+  --interactive-hover-color: #ff007066;
+  --section-heading-color: #ff0070;
+  --decorative-element-color: #ff0070;
+  --navigation-color: #ff0070;
+  --indicator-color: #ff0070;
+  --background-image: url(../images/cover-image-dark.png);
 }
-
-/* Убираем медиа-запрос для prefers-color-scheme: dark,
-   так как это теперь тема по умолчанию */

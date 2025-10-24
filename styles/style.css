@@ -1,107 +1,68 @@
-/* === Основные стили проекта === */
-
-/* Сначала импортируем переменные с тёмной темой по умолчанию */
-@import 'variables.css';
-
-/* Затем секции */
-@import 'sections/header.css';
+@import "sections/header.css";
 @import "sections/main.css";
 @import "sections/footer.css";
 
-/* И в конце - переопределения для светлой темы */
-@import 'themes/light-theme.css';
-
-/* === Общие стили страницы === */
 .page {
-  margin: 0;
+  margin: 0 auto;
   padding: 10px;
-  font-family: var(--page-font-family), "IBM Plex Mono", monospace;
+  color: var(--main-text-color);
   font-size: 18px;
-  color: var(--text-color);
-  background-image: var(--cover-image);
+  background-image: var(--background-image);
+  background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
   background-attachment: fixed;
+  font-family: var(--main-font-family), serif;
 }
 
-@media (min-width: 768px) {
-  .page {
-    padding: 20px;
-  }
+.accented-background {
+  color: var(--brand-bg-color);
+  background-color: var(--brand-color);
 }
 
-/* === Акцентные элементы === */
+.accented-shadow-text {
+  color: var(--primary-heading-color);
+  font-weight: 700;
+  font-size: var(--mobile-heading-font-size);
+  line-height: 82.5%;
+}
+
 .accented-text {
-  background-color: var(--accent-color);
-  color: var(--accented-text-color);
-  padding: 0 !important;
+  font-size: 18px;
+  line-height: 130%;
 }
 
 .accented-text-bold {
   font-weight: 700;
 }
 
-.link {
-  text-decoration: none;
-  text-shadow: 2px 2px 0 var(--accent-color);
-}
-
-/* === Декор === */
-.decorated-zone {
-  position: relative;
-}
-
-/* ---------- декоративные уголки ---------- */
-.decorated-zone::before,
-.decorated-zone::after {
-  content: "";
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  border-color: var(--decor-color);
-}
-
-.decorated-zone::before {
-  top: 0;
-  right: 0;
-  border-top: 1px solid var(--decor-color);
-  border-right: 1px solid var(--decor-color);
-}
-
-.decorated-zone::after {
-  bottom: 0;
-  left: 0;
-  border-bottom: 1px solid var(--decor-color);
-  border-left: 1px solid var(--decor-color);
-}
-
-/* === Разделы и текст === */
 .section__title {
-  padding: 0;
+  margin: 0 0 20px;
+  color: var(--section-heading-color);
+  font-weight: 700;
   font-size: 18px;
   line-height: 130%;
-  color: var(--titles-color);
 }
 
-.section__subtitle {
-  padding-top: 20px;
-}
-
-@media (min-width: 768px) {
-  .section__title {
-    padding: 0;
-  }
-  .section__subtitle {
-    padding: 0;
-  }
-}
-
-.text__subtitle {
-  padding-top: 10px;
+.section__text {
+  margin: 10px 0 0;
   line-height: 130%;
 }
 
-/* === Основной контент === */
-.main {
-  display: grid;
+.link {
+  text-decoration: none;
+  text-shadow: 2px 2px 0 var(--brand-color);
+}
+
+/* Медиа-запросы */
+@media (min-width: 768px) {
+  .page {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .accented-shadow-text {
+    font-size: var(--desktop-heading-font-size);
+  }
 }

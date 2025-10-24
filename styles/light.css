@@ -1,18 +1,27 @@
-/* === LIGHT THEME === */
 .page.theme_light {
-  --text-color: #353430;
-  --title-color: #ffc2e6;
-  --accent-color: #ff8dcb;
-  --background-color: #fff1f7;
-  --menu-color: #353430;
-  --decor-color: #353430;
-  --titles-color: #353430;
-  --accented-text-color: #353430;
-  --button-text-color: #353430;
-  --button-hover-color: rgba(53, 52, 48, 0.4);
-  --cover-image: url('../images/cover-image-light.png');
-  --rec-decor-visibility: hidden;
+  --background-image: url(../images/cover-image-light.png);
+  --brand-color: #ff8dcb;
+  --brand-bg-color: #353430;
+  --primary-heading-color: #ffc2e6;
+  --main-text-color: #353430;
+  --interactive-hover-color: #32312d66;
+  --decorative-element-color: #353430;
+  --navigation-color: #353430;
+  --indicator-color: transparent;
+  --section-heading-color: #353430;
 }
 
-/* Убираем медиа-запрос для prefers-color-scheme: light,
-   так как теперь светлая тема применяется только явно через класс */
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-image: url(../images/cover-image-light.png);
+    --brand-color: #ff8dcb;
+    --brand-bg-color: #353430;
+    --primary-heading-color: #ffc2e6;
+    --main-text-color: #353430;
+    --interactive-hover-color: #32312d66;
+    --decorative-element-color: #353430;
+    --navigation-color: #353430;
+    --indicator-color: transparent;
+    --section-heading-color: #353430;
+  }
+}
