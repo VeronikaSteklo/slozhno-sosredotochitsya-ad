@@ -1,17 +1,28 @@
 :root {
-  --brand-color: #ff0070;
-  --brand-bg-color: #000028;
-  --primary-heading-color: #db00ff;
-  --main-text-color: #f1b2ce;
-  --secondary-heading-color: #ff0070;
-  --interactive-hover-color: #ff007066;
-  --decorative-element-color: #ff0070;
-  --navigation-color: #ff0070;
-  --section-heading-color: #ff0070;
-  --indicator-color: #ff0070;
-  --background-image: url(../images/cover-image-dark.png);
-  --spacing: 20px;
-  --main-font-family: 'IBM Plex mono';
-  --mobile-heading-font-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  --desktop-heading-font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  /* Цвета для светлой темы */
+  --color-pink-1: #fff1f7;
+  --color-pink-2: #f1b2ce;
+  --color-pink-3: #ffc2e6;
+  --color-pink-4: #ff8dcb;
+  --color-black-1: #000028;
+  --color-black-2: #353430;
+  --color-black-2-o-40: #35343040;
+  --color-purple-1: #db00ff;
+  --color-purple-2: #ff0070;
+  --color-purple-2-o-40: #ff007040;
+
+  /* Переменные по умолчанию */
+  --text-color: var(--color-pink-2, #f1b2ce);
+  --brand-color: var(--color-purple-1, #db00ff);
+  --secondary-color: var(--color-purple-2, #ff0070);
+  --secondary-color-o-40: var(--color-purple-2-o-40, #ff007040);
+  --accent-color: var(--color-purple-2, #ff0070);
+  --highlight-color: var(--color-black-1, #000028);
+
+  --page-background-color: var(--color-black-1, #000028);
+  --page-background-image: url("../images/cover-image-dark.png");
+
+  --rec-decor-visibility: visible;
+
+  --page-font-family: "IBM Plex mono", monospace;
 }
