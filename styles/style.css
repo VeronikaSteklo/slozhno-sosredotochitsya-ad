@@ -2,17 +2,24 @@
 @import "sections/main.css";
 @import "sections/footer.css";
 
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .page {
   margin: 0 auto;
   padding: 10px;
   color: var(--main-text-color);
   font-size: 18px;
+  background-color: var(--brand-bg-color);
   background-image: var(--background-image);
   background-repeat: no-repeat;
   background-position: top center;
   background-size: cover;
   background-attachment: fixed;
-  font-family: var(--main-font-family), serif;
+  font-family: var(--main-font-family), Plex, mono, serif;
+  min-height: 100vh;
 }
 
 .accented-background {
